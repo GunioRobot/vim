@@ -8,7 +8,6 @@
 " Author: Kevin Jalbert <kevin.j.jalbert@gmail.com>
 " ----------------------------------------------------------------------------
 
-
 " Use Vim settings instead of vi
 set nocompatible
 
@@ -37,6 +36,11 @@ Bundle 'gmarik/vundle'
 " -----------
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
+
+" SCRATCH
+" Allows a quick scratch buffer within Vim
+" -----------
+Bundle 'duff/vim-scratch'
 
 " FUGITIVE
 " A Git wrapper to allow for the usage of Git commands
@@ -114,7 +118,7 @@ let g:snips_author = "Kevin Jablbert"
 " --------
 Bundle 'godlygeek/csapprox'
 if !has("gui")
-    let g:CSApprox_loaded = 1
+  let g:CSApprox_loaded = 1
 endif
 
 " MARKDOWN
@@ -128,7 +132,18 @@ Bundle 'plasticboy/vim-markdown'
 " ----------------
 
 
-" Automatically detect file types 
+" Increase tty redraw speed
+set ttyfast
+set lazyredraw
+
+" Turn off null characters
+imap <Nul> <Space>
+imap <Nul> <Nop>
+vmap <Nul> <Nop>
+cmap <Nul> <Nop>
+nmap <Nul> <Nop>
+
+" Automatically detect file types
 filetype plugin indent on
 
 " Enable backspacing over everything in insert mode
@@ -234,7 +249,7 @@ nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :TlistToggle<cr>
 
 " Toggle MiniBufExplorer
-nmap <f4> :MiniBufExplovimrc
+nmap <f4> :MiniBufExpl<cr>
 
 " Auto-indent file
 map <f5> mzgg=G'z<CR>
@@ -248,17 +263,23 @@ nnoremap <f7> za
 onoremap <f7> <C-C>za
 vnoremap <f7> zf
 
-" Toggle numbering mode
-function! g:ToggleNuMode() 
-  if(&rnu == 1) 
-    set nu 
-  else 
-    set rnu 
-  endif 
-endfunc 
-nnoremap <f12> :call g:ToggleNuMode()<cr> 
+" Toggle error window
+nmap <silent> <f8> :ErrorsToggle<cr>
 
-" Better way to move between windows 
+" Toggle scratch pad
+nnoremap <silent> <leader><tab> :ScratchToggle<cr>
+
+" Toggle numbering mode
+function! g:ToggleNuMode()
+  if(&rnu == 1)
+    set nu
+  else
+    set rnu
+  endif
+endfunc
+nnoremap <f12> :call g:ToggleNuMode()<cr>
+
+" Better way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -290,7 +311,7 @@ set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%*
 
 " Display help file flag
-set statusline+=%h      
+set statusline+=%h
 
 " Display read-only flag
 set statusline+=%r
@@ -492,3 +513,28 @@ autocmd BufReadPost fugitive://*
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
+
+" From Steve Losh (sjl/dotfiles)
+command! ErrorsToggle call ErrorsToggle()
+function! ErrorsToggle() " {{{
+  if exists("w:is_error_window")
+    unlet w:is_error_window
+    exec "q"
+  else
+    exec "Errors"
+    lopen
+    let w:is_error_window = 1
+  endif
+endfunction " }}}
+
+" From Steve Losh (sjl/dotfiles)
+command! ScratchToggle call ScratchToggle()
+function! ScratchToggle() " {{{
+  if exists("w:is_scratch_window")
+    unlet w:is_scratch_window
+    exec "q"
+  else
+    exec "normal! :Sscratch\<cr>\<C-W>J:resize 13\<cr>"
+    let w:is_scratch_window = 1
+  endif
+endfunction " }}}
