@@ -12,18 +12,24 @@ match my personal preferences.
 2. Clone vim repository
 `$ git clone git://github.com/kevinjalbert/vim.git ~/.vim`
 
-3. Make symlink to `.vimrc`
+3. Setup Vundle
+` $ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle `
+
+4. Make symlink to `.vimrc`
 `$ ln -s ~/.vim/vimrc .vimrc`
 
-4. Install vim plugins using Vundle
+5. Install vim plugins using Vundle
   * Launch `vim` and run `:BundleInstall`
 
-5. Enjoy!
+6. Enjoy!
 
 # Plugins
 
+* Vim-indent-guides
+* AfterColors
 * FuzzyFinder
 * Fugitive
+* Vim-scratch
 * Endwise
 * Repeat
 * Taglist
@@ -35,6 +41,7 @@ match my personal preferences.
 * snipMATE
 * CSapprox
 * Markdown
+* Supetab
 
 # Mappings and Bindings
 
@@ -46,9 +53,9 @@ match my personal preferences.
 
 * `Y` will yank till the end of the line
 
-* `Ctrl-e` will switch between the last buffer
+* `,,` will switch between the last buffer
 
-* `Ctrl-l` will clear any highlighting (for example, searches)
+* `Ctrl-l` will clear any highlighting while in insert mode (for example, searches)
 
 * `f2` will toggle NERD Tree to open/close in a left vertical split
 
@@ -58,11 +65,15 @@ match my personal preferences.
 
 * `f5` will auto-indent the current buffer
 
-* `f6` will toggle spellcheck (only within insert mode)
+* `f6` will toggle spellcheck only within insert mode
 
 * `f7` will toggle code folding based on the indention
 
+* `f8` will toggle error window
+
 * `f12` will toggle the line numbering system (relative or absolute)
+
+* `,<tab>` will toggle the scratch pad
 
 * `Ctrl-{h,j,k,l}` will move between windows
 
@@ -73,5 +84,3 @@ match my personal preferences.
 * `,r` will open FuzzyFinder to look for tags from all the open buffers
 
 * `,b` will open FuzzyFinder to look for buffers from the set of open buffers
-
-
