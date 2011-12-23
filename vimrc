@@ -126,6 +126,15 @@ endif
 " --------
 Bundle 'plasticboy/vim-markdown'
 
+" SUPERTAB
+" Provides autocompleting features using tab
+" --------
+Bundle 'ervandew/supertab'
+set completeopt=menu,longest
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabLongestHighlight = 1
+let g:SuperTabLongestEnhanced = 1
+
 
 " ----------------
 " General settings
@@ -161,15 +170,25 @@ set showmode
 " Undo settings
 set undodir=~/.vim/undofiles
 set undofile
-set colorcolumn=+1 "mark the ideal max text width
+
+" Turn backup off
+set nobackup
+set nowb
+set noswapfile
 
 " Search settings
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 " Line settings
 set number
 set rnu
+
+" Display column and cursor line
+set colorcolumn=+1
+set cursorline
 
 " Show whitespace
 set list
@@ -236,7 +255,7 @@ noremap Q gq
 nnoremap Y y$
 
 " Switch between last buffers
-nmap <C-E> :b#<CR>
+nmap <leader><leader> :b#<CR>
 
 " Clear the highlighting and redraw screen
 nnoremap <C-L> :nohls<CR><C-L>
