@@ -70,20 +70,12 @@ Bundle 'tpope/vim-endwise'
 " ----------
 Bundle 'tpope/vim-repeat'
 
-" TAGLIST
+" TAGBAR
 " Displays an overview of the code's structure
 " -------
-Bundle 'vim-scripts/taglist.vim'
-let Tlist_Compact_Format = 1
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Exit_OnlyWindow = 0
-let Tlist_WinWidth = 35
-let tlist_php_settings = 'php;c:class;f:Functions'
-let Tlist_Use_Right_Window=1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Display_Tag_Scope = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Show_One_File = 1
+Bundle 'majutsushi/tagbar'
+let g:tagbar_compact = 1
+let g:tagbar_autoshowtag = 1
 
 " DELIMITMATE
 " Provides automatic closing of quotes, parenthesis, brackets, etc...
@@ -278,7 +270,7 @@ inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <f2> :NERDTreeToggle<cr>
 
 " Toggle TagList
-nnoremap <f3> :TlistToggle<cr>
+nnoremap <f3> :TagbarToggle<cr>
 
 " Toggle MiniBufExplorer
 nmap <f4> :MiniBufExpl<cr>
