@@ -32,7 +32,8 @@ match my personal preferences.
 * Vim-scratch
 * Endwise
 * Repeat
-* Taglist
+* Tagbar
+* Vim-easymotion
 * DelimitMate
 * Syntastic
 * NERDtree
@@ -53,7 +54,9 @@ match my personal preferences.
 
 * `Y` will yank till the end of the line
 
-* `,,` will switch between the last buffer
+* `,l` will switch between the last buffer
+
+* `,,` will trigger easymotion (follow ,, with a motion key)
 
 * `Ctrl-l` will clear any highlighting while in insert mode (for example, searches)
 

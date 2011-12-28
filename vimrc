@@ -77,6 +77,11 @@ Bundle 'majutsushi/tagbar'
 let g:tagbar_compact = 1
 let g:tagbar_autoshowtag = 1
 
+" VIM-EASYMOTION
+" Provides easy vim motions
+" --------------
+Bundle 'Lokaltog/vim-easymotion'
+
 " DELIMITMATE
 " Provides automatic closing of quotes, parenthesis, brackets, etc...
 " -----------
@@ -260,7 +265,7 @@ noremap Q gq
 nnoremap Y y$
 
 " Switch between last buffers
-nmap <leader><leader> :b#<CR>
+nmap <leader>l :b#<CR>
 
 " Clear the highlighting and redraw screen
 nnoremap <C-L> :nohls<CR><C-L>
