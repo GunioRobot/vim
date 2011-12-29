@@ -65,6 +65,11 @@ Bundle 'tpope/vim-fugitive'
 "------------
 Bundle 'tpope/vim-endwise'
 
+" ANSIESC
+" Inteprets ANSI color codes
+" -------
+Bundle 'vim-scripts/AnsiEsc.vim'
+
 " REPEAT
 " Allows the repeat of a plugin map (using '.')
 " ----------
@@ -116,6 +121,16 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplModSelTarget = 1
+" MATCHIT
+" Augments % matching
+" -------
+Bundle 'vim-scripts/matchit.zip'
+
+" INDEXEDSEARCH
+" Shows the current index of the search term
+" -------------
+Bundle 'vim-scripts/IndexedSearch'
+
 
 " SNIPMATE
 " Provides a set of snippets that can be used quickly
