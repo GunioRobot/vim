@@ -44,6 +44,11 @@ let g:indent_guides_start_level = 1
 " -----------
 Bundle 'vim-scripts/AfterColors.vim'
 
+" GUNDO.VIM
+" Graphical undo tree
+" ---------
+Bundle 'sjl/gundo.vim'
+
 " FUZZYFINDER
 " Allows quick fuzzy searching within Vim
 " -----------
@@ -59,6 +64,11 @@ Bundle 'duff/vim-scratch'
 " A Git wrapper to allow for the usage of Git commands
 " --------
 Bundle 'tpope/vim-fugitive'
+
+" VIM-SURROUND
+" Adds the ability to work with surroundings
+" ------------
+Bundle 'tpope/vim-surround'
 
 " ENDWISE
 " Adds 'end' where appropriate while coding (ruby's end if/function, etc...)
@@ -113,14 +123,6 @@ let g:NERDTreeWinSize = 40
 " --------
 Bundle 'scrooloose/nerdcommenter'
 
-" MINIBUFEXPL
-" Provides an elegant buffer explorer
-" -----------
-Bundle 'fholgado/minibufexpl.vim'
-let g:miniBufExplorerMoreThanOne = 2
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
 " MATCHIT
 " Augments % matching
 " -------
@@ -131,6 +133,10 @@ Bundle 'vim-scripts/matchit.zip'
 " -------------
 Bundle 'vim-scripts/IndexedSearch'
 
+" YANKRING
+" Augments the yank/pasting functionality
+" --------
+Bundle 'vim-scripts/YankRing.vim'
 
 " SNIPMATE
 " Provides a set of snippets that can be used quickly
@@ -292,8 +298,8 @@ nnoremap <f2> :NERDTreeToggle<cr>
 " Toggle TagList
 nnoremap <f3> :TagbarToggle<cr>
 
-" Toggle MiniBufExplorer
-nmap <f4> :MiniBufExpl<cr>
+" Toggle YankRing
+nnoremap <f4> :YRShow<CR>
 
 " Auto-indent file
 map <f5> mzgg=G'z<CR>
@@ -309,6 +315,9 @@ vnoremap <f7> zf
 
 " Toggle error window
 nmap <silent> <f8> :ErrorsToggle<cr>
+
+" Toggle Gundo
+nnoremap <f9> :GundoToggle<CR>
 
 " Toggle scratch pad
 nnoremap <silent> <leader><tab> :ScratchToggle<cr>
