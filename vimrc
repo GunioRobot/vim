@@ -279,6 +279,20 @@ autocmd filetype svn,*commit* setlocal spell
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
+" Manage vertical and horizontal splits
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+noremap <C-H> :vertical resize -1<CR>
+noremap <C-L> :vertical resize +1<CR>
+noremap <C-K> :resize +1<CR>
+noremap <C-J> :resize -1<CR>
+
+" Better way to move between windows
+nnoremap <silent> J <C-W>j
+nnoremap <silent> K <C-W>k
+nnoremap <silent> H <C-W>h
+nnoremap <silent> L <C-W>l
+
 " Wrap line(s) to textwidth
 noremap Q gq
 
@@ -289,8 +303,8 @@ nnoremap Y y$
 nmap <leader>l :b#<CR>
 
 " Clear the highlighting and redraw screen
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+nnoremap <leader>h :nohls<CR>
+inoremap <leader>h <C-O>:nohls<CR>
 
 " Toggle NERD Tree
 nnoremap <f2> :NERDTreeToggle<cr>
@@ -331,12 +345,6 @@ function! g:ToggleNuMode()
   endif
 endfunc
 nnoremap <f12> :call g:ToggleNuMode()<cr>
-
-" Better way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Quickfinding with FuzzyFinder
 nmap ,f :FufFileWithCurrentBufferDir<CR>

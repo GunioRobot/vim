@@ -27,18 +27,23 @@ match my personal preferences.
 
 * Vim-indent-guides
 * AfterColors
+* Gundo.vim
 * FuzzyFinder
 * Fugitive
+* vim-surround
 * Vim-scratch
 * Endwise
 * Repeat
+* ANSIesc
 * Tagbar
 * Vim-easymotion
 * DelimitMate
 * Syntastic
 * NERDtree
 * NERDCommenter
-* MiniBufExpl
+* Matchit
+* Indexedsearch
+* Yankring
 * snipMATE
 * CSapprox
 * Markdown
@@ -58,13 +63,13 @@ match my personal preferences.
 
 * `,,` will trigger easymotion (follow ,, with a motion key)
 
-* `Ctrl-l` will clear any highlighting while in insert mode (for example, searches)
+* `,h` will clear any highlighting (for example, searches)
 
 * `f2` will toggle NERD Tree to open/close in a left vertical split
 
 * `f3` will toggle Taglist to open/close in a right vertical split
 
-* `f4` will jump to the MiniBufExplorer buffer
+* `f4` will toggle YankRing
 
 * `f5` will auto-indent the current buffer
 
@@ -74,11 +79,19 @@ match my personal preferences.
 
 * `f8` will toggle error window
 
+* `f9` will toggle Gundo
+
 * `f12` will toggle the line numbering system (relative or absolute)
 
 * `,<tab>` will toggle the scratch pad
 
-* `Ctrl-{h,j,k,l}` will move between windows
+* `ss` will make a horizontal split of the current buffer
+
+* `vv` will make a vertical split of the current buffer
+
+* `Ctrl-{h,j,k,l}` will shrink/expand splits
+
+* `H, J, K, L` will move between splits
 
 * `,f` will open FuzzyFinder to look for files from the current buffers directory
 
