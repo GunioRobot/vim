@@ -11,5 +11,7 @@ else
   hi VisualNOS guifg=NONE guibg=#262626 ctermbg=235 gui=none
 endif
 
+hi MatchParen guifg=#000000 guibg=#af5f5f ctermfg=0 ctermbg=131 gui=bold
+
 hi IndentGuidesOdd guibg=#3a3a3a ctermbg=237
 hi IndentGuidesEven guibg=#444444 ctermbg=238
