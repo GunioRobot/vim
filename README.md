@@ -29,12 +29,12 @@ match my personal preferences.
 * AfterColors
 * Gundo.vim
 * FuzzyFinder
+* Scratch
 * Fugitive
-* vim-surround
-* Vim-scratch
+* Vim-surround
 * Endwise
-* Repeat
 * ANSIesc
+* Repeat
 * Tagbar
 * Vim-easymotion
 * DelimitMate
@@ -47,7 +47,9 @@ match my personal preferences.
 * snipMATE
 * CSapprox
 * Markdown
-* Supetab
+* Supertab
+* Vim-Rspec
+* Vim-Ruby
 
 # Mappings and Bindings
 
@@ -92,6 +94,10 @@ match my personal preferences.
 * `Ctrl-{h,j,k,l}` will shrink/expand splits
 
 * `H, J, K, L` will move between splits
+
+* `,A` will run Rspec using the current file
+
+* `,S` will run Rspec using the current line
 
 * `,f` will open FuzzyFinder to look for files from the current buffers directory
 

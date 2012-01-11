@@ -166,6 +166,17 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabLongestHighlight = 1
 let g:SuperTabLongestEnhanced = 1
 
+" VIM-RSPEC
+" Provides easier testing with Ruby and Rspec
+" ------
+Bundle 'skwp/vim-rspec'
+let g:RspecKeymap = 0
+
+" VIM-RUBY
+" Provides better Ruby support
+" --------
+Bundle 'vim-ruby/vim-ruby'
+
 
 " ----------------
 " General settings
@@ -351,6 +362,10 @@ nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,t :FufBufferTag<CR>
 nmap ,r :FufBufferTagAll<CR>
 nmap ,b :FufBuffer<CR>
+
+" Run Rspec
+map <silent> <leader>A :RunSpec<cr>
+map <silent> <leader>S :RunSpecLine<cr>
 
 
 " -------------------
