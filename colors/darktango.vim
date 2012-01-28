@@ -24,9 +24,9 @@ hi Title    guifg=#eeeeec
 hi Underlined   guifg=#20b0eF gui=none
 hi Statement    guifg=#888a85
 hi Type     guifg=#ce5c00
-hi PreProc  guifg=#eeeeec 
+hi PreProc  guifg=#eeeeec
 hi Constant guifg=#babdb6
-hi Identifier   guifg=#ce5c00 
+hi Identifier   guifg=#ce5c00
 hi Special  guifg=#eeeeec
 hi Ignore   guifg=#f57900
 hi Todo     guibg=#ce5c00 guifg=#eeeeec
@@ -56,7 +56,7 @@ hi IncSearch    guibg=#c4a000 guifg=#fce94f
 hi SpecialKey   guifg=#ce5c00
 hi StatusLine   guibg=#555753 guifg=#eeeeec gui=none
 hi StatusLineNC guibg=#555753 guifg=#272334 gui=none
-hi Visual   guibg=#fcaf3e guifg=#ce5c00 
+hi Visual   guibg=#fcaf3e guifg=#ce5c00
 "hi VisualNOS
 hi WarningMsg   guifg=salmon
 "hi WildMenu

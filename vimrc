@@ -262,7 +262,7 @@ set sidescrolloff=7
 set sidescroll=1
 
 " Do not auto-comment when pushing o/O
-set formatoptions-=o 
+set formatoptions-=o
 
 " Hide buffers when not displayed
 set hidden

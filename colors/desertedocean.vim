@@ -32,9 +32,9 @@ hi Title    guifg=#00aBdF
 hi Underlined guifg=#20b0eF gui=none
 hi Statement  guifg=#eF7a7a
 hi Type       guifg=#dAa0b0
-hi PreProc    guifg=#FF7A9a 
-hi Constant   guifg=#EE8aB5 " or #FF707A 
-hi Identifier guifg=#FFe0bd 
+hi PreProc    guifg=#FF7A9a
+hi Constant   guifg=#EE8aB5 " or #FF707A
+hi Identifier guifg=#FFe0bd
 hi Special    guifg=#8cf0ff
 hi Ignore   guifg=grey40
 hi Todo     guifg=orangered guibg=yellow2
@@ -53,7 +53,7 @@ hi Directory guifg=#bbd0df
 hi VertSplit    guibg=#c2bfa5 guifg=grey50 gui=none
 hi Folded   guibg=#337799 guifg=#BBDDCC
 hi FoldColumn   guibg=#337799 guifg=#00CCFF
-hi LineNr   guifg=#CCF0FF guibg=#006688 
+hi LineNr   guifg=#CCF0FF guibg=#006688
 hi ModeMsg  guifg=#00AACC
 hi MoreMsg  guifg=SeaGreen
 hi NonText  guifg=#285960 guibg=#2A374A
@@ -72,7 +72,7 @@ hi WarningMsg   guifg=salmon
 "hi Tooltip
 
 hi Pmenu    guifg=#6Aa0e0 guibg=#222f3d
-hi PmenuSel guifg=#FFFFFF guibg=#0088bb 
+hi PmenuSel guifg=#FFFFFF guibg=#0088bb
 
 " color terminal definitions
 hi SpecialKey   ctermfg=darkgreen

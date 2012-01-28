@@ -5,7 +5,7 @@
 " Version:      3.00
 "
 "       Please prepend [VIM] in the title when writing e-mail to me, or it will
-"       be automatically treated as spam and removed. 
+"       be automatically treated as spam and removed.
 "
 "       See the help document for all details, the help document will be
 "       installed after the script has been sourced once, do not open the
@@ -70,7 +70,7 @@ if &background=='light'
       let s:style = 'warm'
     elseif s:style=='defdark'
       let s:style = 'default'
-    else 
+    else
       let s:other_style = 1
     endif
   else
@@ -78,18 +78,18 @@ if &background=='light'
       let s:cterm_style='default'
     elseif s:cterm_style=='default'
       " nothing to do
-    else 
+    else
       let s:other_style = 1
     endif
   endif
 elseif &background=='dark'
-  if s:style=='warm' 
+  if s:style=='warm'
     let s:style = 'cool'
   elseif s:style=='default'
     let s:style = 'defdark'
   elseif s:style=='cool' || s:style=='defdark'
     " nothing to do
-  else 
+  else
     let s:other_style = 1
   endif
   let s:cterm_style = s:style
@@ -115,7 +115,7 @@ endif
 
 let s:color_name = expand("<sfile>:t:r")
 
-if s:other_style==0 
+if s:other_style==0
   let g:colors_name = s:color_name
   " Go from console version to gui, the color scheme should be sourced again
   execute "autocmd TermChanged * if g:colors_name == '".s:color_name."' | "
@@ -141,7 +141,7 @@ endif
 
 " }}}1
 
-" Relevant Help: 
+" Relevant Help:
 " :h highlight-groups
 " :h psc-cterm-color-table
 " :ru syntax/hitest.vim
@@ -154,8 +154,8 @@ endif
 
 " GUI:
 "
-" I don't want to abuse folding, but here folding is used to avoid confusion. 
-if s:style=='warm' 
+" I don't want to abuse folding, but here folding is used to avoid confusion.
+if s:style=='warm'
   " Warm style for gui here {{{2
   " LIGHT COLOR DEFINE START
 
@@ -164,7 +164,7 @@ if s:style=='warm'
   highlight Visual              guifg=NONE      guibg=#a6caf0
   highlight Cursor              guifg=#f0f0f0   guibg=#008000
   " The idea of CursorIM is pretty good, however, the feature is still buggy
-  " in the current version (Vim 7.0). 
+  " in the current version (Vim 7.0).
   " The following line will be kept commented until the bug fixed.
   "
   " highlight CursorIM          guifg=#f0f0f0   guibg=#800080
@@ -234,7 +234,7 @@ if s:style=='warm'
 
   " LIGHT COLOR DEFINE END
   " }}}2
-elseif s:style=='cool' 
+elseif s:style=='cool'
   " Cool style for gui here {{{2
   " DARK COLOR DEFINE START
 
@@ -285,7 +285,7 @@ elseif s:style=='cool'
   highlight IncSearch           guifg=#000000   guibg=#d0d0d0
   highlight StatusLineNC        guifg=#000000   guibg=#c0c0c0
   highlight VertSplit           guifg=#000000   guibg=#c0c0c0
-  highlight Underlined          guifg=#80a0ff   guibg=NONE      gui=underline 
+  highlight Underlined          guifg=#80a0ff   guibg=NONE      gui=underline
   highlight Ignore              guifg=#000000   guibg=NONE
   " NOTE THIS IS IN THE COOL SECTION
   if v:version >= 700
@@ -369,7 +369,7 @@ endif
 " Color Term:
 
 " It's not quite possible to support 'cool' and 'warm' simultaneously, since
-" we cannot expect a terminal to have more than 16 color names. 
+" we cannot expect a terminal to have more than 16 color names.
 "
 
 " I assume Vim will never go to cterm mode when has("gui_running") returns 1,
@@ -466,7 +466,7 @@ if !has('gui_running')
       " However, the bright background color is not available for 8-color terms.
       "
       " You can manually set t_Co=16 in your .vimrc to see if your terminal
-      " supports 16 colours, 
+      " supports 16 colours,
       MultiHi cterm=none DiffText Visual Cursor Comment Todo StatusLine Question DiffChange ModeMsg VisualNOS ErrorMsg WildMenu DiffAdd Folded DiffDelete Normal PmenuThumb
       MultiHi cterm=bold Search Special Constant Number LineNr PreProc Statement Type Error Identifier SpecialKey NonText MoreMsg Title WarningMsg FoldColumn SignColumn Directory DiffDelete
 
@@ -513,7 +513,7 @@ if (s:style=='cool') || (s:style == 'warm')
   highlight link                Character       Number
   highlight link                SpecialChar     LineNr
   highlight link                Tag             Identifier
-  " The following are not standard hi links, 
+  " The following are not standard hi links,
   " these are used by DrChip
   highlight link                Warning         MoreMsg
   highlight link                Notice          Constant

@@ -195,7 +195,7 @@ endfunction
 
 " {{{2 set_brightness( default): Set s:brightness based on default
 function s:set_brightness( default)
-    let s:brightness = ( exists('g:xterm16_brightness') 
+    let s:brightness = ( exists('g:xterm16_brightness')
 		\ && g:xterm16_brightness != 'default') ?
 		\	g:xterm16_brightness : a:default
     if s:colormap == 'allblue'

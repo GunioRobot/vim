@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     SQL, PLPGSQL (PostgreSQL)
 " Maintainer:   Devdas Bhagat <devdas@dvb.homelinux.org>
-" Derived from the syntax file for plsql maintained by 
+" Derived from the syntax file for plsql maintained by
 " Paul Moore <gustav@morpheus.demon.co.uk>
 " Last Change:  2004 April 17
 " Version: 0.04
@@ -50,7 +50,7 @@ syn match  psqlOperator         "\(@@\|@-@\|^\||\|||\|||\/\|\~\|\~\*\)"
 syn match  psqlOperator         "\(\~=\|\~\~\|\~\~\*\|:=\)"
 
 syn keyword psqlStatement alter analyze audit comment commit create
-syn keyword psqlStatement delete drop execute explain grant insert lock 
+syn keyword psqlStatement delete drop execute explain grant insert lock
 syn keyword psqlStatement rename revoke rollback savepoint select set
 syn keyword psqlStatement truncate update analyze vacuum replace
 
@@ -58,9 +58,9 @@ syn keyword psqlType    boolean char character date float integer long
 syn keyword psqlType    mlslabel number raw rowid varchar varchar2 varray
 syn keyword psqlType    int int4 int8 float4 float8 line interval lseq
 syn keyword psqlType    smallint bigint serial bigserial inet cidr macaddr
-syn keyword psqlType    bit varbit bool box bytea circle numeric decimal 
-syn keyword psqlType    path point polygon text time timetz timestamp 
-syn keyword psqlType    timestamptz real name int2vector regproc 
+syn keyword psqlType    bit varbit bool box bytea circle numeric decimal
+syn keyword psqlType    path point polygon text time timetz timestamp
+syn keyword psqlType    timestamptz real name int2vector regproc
 syn keyword psqlType    oid tid xid cid oidvector smgr lseg double
 syn keyword psqlType    abstime reltime tinterval aclitem void opaque
 syn keyword psqlType    refcursor regprocedure regoper regoperator regclass

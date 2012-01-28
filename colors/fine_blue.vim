@@ -15,39 +15,39 @@ let colors_name = "fine_blue"
 
 hi Normal       guifg=#303040 guibg=#f8f8f8
 
-" Search 
+" Search
 hi IncSearch    gui=UNDERLINE guifg=#303040 guibg=#40ffff
 hi Search       gui=NONE guifg=#303040 guibg=#ffffa0
 
-" Messages 
+" Messages
 hi ErrorMsg     gui=NONE guifg=#ff0070 guibg=#ffe0f4
 hi WarningMsg   gui=NONE guifg=#ff0070 guibg=#ffe0f4
 hi ModeMsg      gui=NONE guifg=#0070ff guibg=NONE
 hi MoreMsg      gui=NONE guifg=#a800ff guibg=NONE
 hi Question     gui=NONE guifg=#008050 guibg=NONE
 
-" Split area 
+" Split area
 hi StatusLine   gui=BOLD guifg=#f8f8f8 guibg=#303040
 hi StatusLineNC gui=BOLD guifg=#a0a0b0 guibg=#303040
 hi VertSplit    gui=NONE guifg=#f8f8f8 guibg=#303040
 hi WildMenu     gui=BOLD guifg=#f8f8f8 guibg=#00aacc
 
-" Diff 
+" Diff
 hi DiffText     gui=NONE guifg=#f83010 guibg=#ffeae0
 hi DiffChange   gui=NONE guifg=#006800 guibg=#d0ffd0
 hi DiffDelete   gui=NONE guifg=#2020ff guibg=#c8f2ea
 hi DiffAdd      gui=NONE guifg=#2020ff guibg=#c8f2ea
 
-" Cursor 
+" Cursor
 hi Cursor       gui=NONE guifg=#0000ff guibg=#00e0ff
 hi lCursor      gui=NONE guifg=#f8f8f8 guibg=#8000ff
 hi CursorIM     gui=NONE guifg=#f8f8f8 guibg=#8000ff
 
-" Fold 
+" Fold
 hi Folded       gui=NONE guifg=#7800ff guibg=#e0d8ff
 hi FoldColumn   gui=NONE guifg=#aa60ff guibg=#f0f0f4
 
-" Other 
+" Other
 hi Directory    gui=NONE guifg=#0000ff guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff guibg=#ececf0
@@ -55,7 +55,7 @@ hi SpecialKey   gui=NONE guifg=#c87000 guibg=NONE
 hi Title        gui=NONE guifg=#004060 guibg=#c8f0f8
 hi Visual       gui=NONE guifg=#404060 guibg=#dddde8
 
-" Syntax group 
+" Syntax group
 hi Comment      gui=NONE guifg=#ff00c0 guibg=NONE
 hi Constant     gui=NONE guifg=#2020ff guibg=#e8e8ff
 hi Error        gui=BOLD guifg=#ffffff guibg=#ff4080
@@ -68,7 +68,7 @@ hi Todo         gui=NONE guifg=#ff0070 guibg=#ffe0f4
 hi Type         gui=NONE guifg=#7040ff guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#0000ff guibg=NONE
 
-" HTML 
+" HTML
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff guibg=NONE
 hi htmlBold                 gui=BOLD
 hi htmlBoldItalic           gui=BOLD,ITALIC

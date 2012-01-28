@@ -4,10 +4,10 @@
 " Version:       1.3
 " Maintainer:    Bernd Pol (bernd.pol AT online DOT de)
 " Copyright:     2006 Bernd Pol
-"                This script is free software; you can redistribute it and/or 
-"                modify it under the terms of the GNU General Public License as 
-"                published by the Free Software Foundation; either version 2 of 
-"                the License, or (at your option) any later version. 
+"                This script is free software; you can redistribute it and/or
+"                modify it under the terms of the GNU General Public License as
+"                published by the Free Software Foundation; either version 2 of
+"                the License, or (at your option) any later version.
 " Description:   Vim colorscheme based on marklar.vim by SM Smithfield,
 "        slightly modified for harmonic, yet easily distinguishable
 "        display on GUI and a 256 color xterm as well.
@@ -181,7 +181,7 @@ if version >= 700
 endif
 "------------------------------------------------------------------------------
 
-hi Comment      guifg=#00C5E7                   ctermfg=45  
+hi Comment      guifg=#00C5E7                   ctermfg=45
 
 "------------------------------------------------------------------------------
 " Constant Colors:
@@ -273,7 +273,7 @@ hi ModeMsg      guifg=#FFFFFF   guibg=#0000FF   gui=NONE    ctermfg=7   ctermbg=
 hi MoreMsg      guifg=#FFFFFF   guibg=#00A261   gui=NONE    ctermfg=7   ctermbg=28  cterm=NONE
 
 "if &background == "dark"
-  hi Normal     guifg=#71D289   guibg=#065349           ctermfg=85  ctermbg=23 
+  hi Normal     guifg=#71D289   guibg=#065349           ctermfg=85  ctermbg=23
 "else
 "  hi Normal        guibg=#71D289   guifg=#065349           ctermfg=85  ctermbg=23
 "endif

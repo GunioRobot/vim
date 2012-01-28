@@ -84,13 +84,13 @@ endf
     " trim to the first period
     let l:hue = s:guard(a:hue, 360)
 
-    if l:hue < 60 
+    if l:hue < 60
       retu a:v1 + l:hue * (a:v2 - a:v1) / 60
     en
-    if l:hue < 180 
+    if l:hue < 180
       retu a:v2
     en
-    if l:hue < 240 
+    if l:hue < 240
       retu a:v1 + (240 - l:hue) * (a:v2 - a:v1) / 60
     en
     retu a:v1
@@ -110,7 +110,7 @@ fu! s:hsb2colors(hue,sat,bri)
 
   if a:bri < 512
     let l:v2 = a:bri * ( 1023 + a:sat )
-  el           
+  el
     let l:v2 = ( a:bri + a:sat ) * 1023 - ( a:sat * a:bri )
   en
 
@@ -138,19 +138,19 @@ fu! s:rgb2hsb(red,green,blue)
   let l:green = a:green * 1023 / 255
   let l:blue = a:blue * 1023 / 255
 
-  let l:min = s:min(l:red, l:green, l:blue) 
-  let l:max = s:max(l:red, l:green, l:blue) 
+  let l:min = s:min(l:red, l:green, l:blue)
+  let l:max = s:max(l:red, l:green, l:blue)
   let l:delta = l:max - l:min
 
   let s:bri = (l:max + l:min) / 2
 
-  if  l:delta == 0 
+  if  l:delta == 0
     let s:hue = 180	" When sat = 0, hue default to 180
     let s:sat = 0
-  el 
-    if s:bri < 512 
+  el
+    if s:bri < 512
       let s:sat = l:delta * 1023 / (l:max + l:min)
-    el           
+    el
       let s:sat = l:delta * 1023 / (2*1023 - l:max - l:min)
     en
 
@@ -158,11 +158,11 @@ fu! s:rgb2hsb(red,green,blue)
     let l:del_g = ( (l:max-l:green) + (l:delta*3) ) * 60 / l:delta
     let l:del_b = ( (l:max-l:blue) + (l:delta*3) ) * 60 / l:delta
 
-    if l:red == l:max 
+    if l:red == l:max
       let s:hue = l:del_b - l:del_g
-    elsei  l:green == l:max  
+    elsei  l:green == l:max
       let s:hue = 120 + l:del_r - l:del_b
-    elsei  l:blue == l:max  
+    elsei  l:blue == l:max
       let s:hue = 240 + l:del_g - l:del_r
     en
 
@@ -173,7 +173,7 @@ endf
 " sub-functions
   if !exists("s:loaded") | let s:hue_range = 0 | let s:hue_phase = 0 | en
   fu! s:cast_hue(hue)
-    retu a:hue * s:hue_range / 360 - s:hue_range / 2 + s:hue_phase 
+    retu a:hue * s:hue_range / 360 - s:hue_range / 2 + s:hue_phase
   endf
 
   if !exists("s:loaded") | let s:sat_base = 0 | let s:sat_modify = 0 | en
@@ -303,7 +303,7 @@ fu! s:psc_reload(...)
     en
   en
 
-  if a:0 >= 8 
+  if a:0 >= 8
     let s:plainfont = a:8
   el
     InitOpt fontface 'mixed'
@@ -356,10 +356,10 @@ fu! s:psc_reload(...)
   exe "sil! 1new ".s:tempfile
   sil! %d
   exe "sil! 0r ".s:reload_filename
-  if s:verbose 
-    ec '" Reloaded color scheme from '.s:reload_filename 
-    ec '" with param ' s:hue_range s:sat_modify s:bri_modify 
-          \s:hue_phase s:sat_base s:bri_base s:lightbg s:plainfont 
+  if s:verbose
+    ec '" Reloaded color scheme from '.s:reload_filename
+    ec '" with param ' s:hue_range s:sat_modify s:bri_modify
+          \s:hue_phase s:sat_base s:bri_base s:lightbg s:plainfont
     ec '" '
   en
 
@@ -382,7 +382,7 @@ fu! s:psc_reload(...)
 
     let s:nnb = s:nnb + 1
 
-    " Skip invalid lines 
+    " Skip invalid lines
     if s:line !~ '^\s*hi\%[ghlight]\s*.*' | con | en
 
     exe substitute(s:line, '\<hi\%[ghlight]\>', 'PscHi', '')
@@ -425,7 +425,7 @@ fu! s:psc_reload(...)
     let s:line = getline(s:nnb)
 
     let s:nnb = s:nnb + 1
-    " Skip invalid lines 
+    " Skip invalid lines
     if s:line !~ '^\s*hi\%[ghlight]\s*.*' | con | en
 
     if s:verbose | ec s:line | en

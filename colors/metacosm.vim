@@ -6,11 +6,11 @@
 
 " -----------------------------------------------------------------------------
 " This color scheme uses a dark grey background.
-" This theme, based on evening (with some input from Torte) is designed to 
-" seperate active text (code) from background/line numbers/folds/listchars by 
-" having different background colors on the non-code and the code (just 
-" slightly).  If you look at the screenshot below, you will get the idea.  
-" All non-code(include indents) and string literals have a black background 
+" This theme, based on evening (with some input from Torte) is designed to
+" seperate active text (code) from background/line numbers/folds/listchars by
+" having different background colors on the non-code and the code (just
+" slightly).  If you look at the screenshot below, you will get the idea.
+" All non-code(include indents) and string literals have a black background
 " while code has a very dark grey background.
 " -----------------------------------------------------------------------------
 set background=dark
@@ -30,7 +30,7 @@ let colors_name = "metacosm"
 hi IncSearch guibg=black guifg=cyan
 hi Search guibg=black guifg=cyan
 
-" Visual 
+" Visual
 hi Visual guibg=yellow guifg=black
 hi VisualNOS guibg=yellow guifg=black gui=underline
 
@@ -141,7 +141,7 @@ hi Directory guibg=black guifg=cyan
 " Vim 7.x only
 " ----------------------------------------------------------------------------
 hi MatchParen guibg=purple guifg=yellow
-hi CursorLine guibg=grey15 
+hi CursorLine guibg=grey15
 hi CursorColumn guibg=grey15
 hi Pmenu guibg=grey20 guifg=white
 hi PmenuSel guibg=lightblue guifg=black

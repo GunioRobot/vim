@@ -154,14 +154,14 @@ if v:version >= 700
   hi PmenuSel   cterm=none  ctermfg=0   ctermbg=243 gui=none    guifg=#000000   guibg=#767676
   hi PmenuSbar  cterm=none  ctermfg=fg  ctermbg=243 gui=none    guifg=fg    guibg=#767676
   hi PmenuThumb cterm=none  ctermfg=bg  ctermbg=252 gui=none    guifg=bg    guibg=#d0d0d0
-  
+
   "  if has("spell")
   "     hi SpellBad guisp=#ee2c2c   gui=undercurl
   "     hi SpellCap guisp=#2c2cee   gui=undercurl
   "     hi SpellLocal   guisp=#2ceeee   gui=undercurl
   "     hi SpellRare    guisp=#ee2cee   gui=undercurl
   "  endif
-  
+
   hi MatchParen cterm=none  ctermfg=188 ctermbg=68  gui=bold    guifg=#dfdfdf   guibg=#5f87df
   "hi MatchParen    cterm=none  ctermfg=24  ctermbg=153 gui=none    guifg=#005f87   guibg=#afdfff
   "hi MatchParen    cterm=none  ctermfg=117 ctermbg=31  gui=bold    guifg=#87dfff   guibg=#0087af
